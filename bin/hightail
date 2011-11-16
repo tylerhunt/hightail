@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+hightail_root = File.expand_path('../../lib/hightail', __FILE__)
+templates_root = File.expand_path('../../templates', __FILE__)
+
+require File.join(hightail_root, 'generators/app_generator')
+require File.join(hightail_root, 'app_builder')
+
+Hightail::Generator.source_root templates_root
+
+Hightail::Generator.source_paths \
+  << templates_root \
+  << Rails::Generators::AppGenerator.source_root
+
+Hightail::Generator.start
