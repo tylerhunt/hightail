@@ -48,6 +48,10 @@ module Hightail
       "hightail #{self.arguments.map(&:usage).join(' ')} [options]"
     end
 
+    def comment_if(value)
+      super.strip
+    end
+
     def get_builder_class
       AppBuilder
     end
