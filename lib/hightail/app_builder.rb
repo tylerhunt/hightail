@@ -1,9 +1,5 @@
 module Hightail
   class AppBuilder < Rails::AppBuilder
-    def doc
-      template 'doc/README_FOR_APP'
-    end
-
     def readme
       template 'README.md'
     end
