@@ -27,13 +27,8 @@ module Hightail
       default: true,
       desc: 'Add the OmniAuth Rails authentication library'
 
-    def self.banner
-      "hightail #{self.arguments.map(&:usage).join(' ')} [options]"
-    end
-
     def initialize(*args)
       raise Rails::Generators::Error, 'Options should be given after the application name. For details run: hightail --help' if args[0].blank?
-
       super
     end
 
@@ -43,8 +38,18 @@ module Hightail
     end
 
     def hightail_customization
-      build(:remove_public_index)
-      build(:remove_rails_logo)
+      build :remove_public_index
+      build :remove_rails_logo
+    end
+
+    protected
+
+    def self.banner
+      "hightail #{self.arguments.map(&:usage).join(' ')} [options]"
+    end
+
+    def get_builder_class
+      AppBuilder
     end
   end
 end
