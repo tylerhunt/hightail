@@ -44,7 +44,6 @@ module Hightail
       build :rvm unless options[:skip_rvm]
       build :rspec unless options[:skip_rspec]
       build :generators
-      build :stylesheets
       build :lib_app_name
       build :remove_public_index
       build :remove_rails_logo

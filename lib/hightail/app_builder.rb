@@ -1,5 +1,10 @@
 module Hightail
   class AppBuilder < Rails::AppBuilder
+    def app
+      super
+      directory 'app_overrides', 'app', :force => true
+    end
+
     def database_yml
       template "config/databases/#{options[:database]}.yml", 'config/database.yml.example'
     end
@@ -20,10 +25,6 @@ module Hightail
 
     def generators
       directory 'lib/generators'
-    end
-
-    def stylesheets
-      directory 'stylesheets', 'app/assets/stylesheets'
     end
 
     def lib_app_name
