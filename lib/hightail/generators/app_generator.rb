@@ -78,8 +78,11 @@ module Hightail
     def rspec_gemfile_entry
       unless options[:skip_rspec]
         <<-GEMFILE.strip_heredoc
-          group :test do
+          group :test, :development do
             gem 'rspec-rails'
+          end
+
+          group :test do
             gem 'remockable'
           end
         GEMFILE
