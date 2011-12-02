@@ -96,6 +96,10 @@ module <%= app_const_base %>
       input(method, options.merge(:type => :text_field), &block)
     end
 
+    def number(method, options={}, &block)
+      input(method, options.merge(:type => :number_field), &block)
+    end
+
     def password(method, options={}, &block)
       input(method, options.merge(:type => :password_field), &block)
     end
@@ -126,12 +130,16 @@ module <%= app_const_base %>
       input(method, options.merge(:type => :collection_select), &block)
     end
 
-    def date_time(method, options={}, &block)
-      input(method, options.merge(:type => :datetime_select), &block)
+    def date(method, options={}, &block)
+      input(method, options.merge(:type => :date_select), &block)
     end
 
     def time(method, options={}, &block)
       input(method, options.merge(:type => :time_select), &block)
+    end
+
+    def date_time(method, options={}, &block)
+      input(method, options.merge(:type => :datetime_select), &block)
     end
 
     def expiration(method, options={}, &block)
