@@ -52,6 +52,22 @@ module Hightail
       super.strip
     end
 
+    def rails_gemfile_entry
+      if options.dev?
+        <<-GEMFILE.strip_heredoc
+          gem 'rails', :path => '#{Rails::Generators::RAILS_DEV_PATH}'
+        GEMFILE
+      elsif options.edge?
+        <<-GEMFILE.strip_heredoc
+          gem 'rails', :git => 'git://github.com/rails/rails.git'
+        GEMFILE
+      else
+        <<-GEMFILE.strip_heredoc
+          gem 'rails'
+        GEMFILE
+      end
+    end
+
     def get_builder_class
       AppBuilder
     end
