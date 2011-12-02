@@ -1,0 +1,9 @@
+*.swp
+.bundle
+.sass-cache
+bin
+config/database.yml
+db/*.sqlite3
+log/*.log
+public/assets
+tmp
