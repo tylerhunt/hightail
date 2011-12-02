@@ -9,6 +9,11 @@ module Hightail
       default: 'postgresql',
       desc: "Preconfigure for selected database (options: #{DATABASES.join('/')})"
 
+    class_option :skip_bundle,
+      :type => :boolean,
+      :default => true,
+      :desc => "Don't run bundle install"
+
     class_option :skip_test_unit,
       type: :boolean,
       aliases: '-T',
