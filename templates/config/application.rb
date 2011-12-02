@@ -35,5 +35,6 @@ module <%= app_const_base %>
     # Generators
     config.generators.test_framework :rspec, view_specs: false
     config.generators.template_engine :haml
+    config.sass.preferred_syntax = :sass
   end
 end
