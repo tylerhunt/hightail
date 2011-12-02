@@ -1,0 +1,16 @@
+!!!
+%html{ html_attrs('en_us') }
+  %head
+    %title <%= app_name %>
+    = stylesheet_link_tag('application')
+    = javascript_include_tag('application')
+    = csrf_meta_tags
+
+  %body{ class: "#{controller_name} #{action_name}" }
+    %header
+      %h1= link_to '<%= app_name %>', root_path
+
+    %section= yield
+
+    %footer
+      %small &copy; #{Time.zone.today.year} 
