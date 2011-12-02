@@ -14,6 +14,10 @@ module Hightail
       empty_directory_with_gitkeep 'spec/support'
     end
 
+    def rvm
+      template 'rvmrc', '.rvmrc'
+    end
+
     def lib_app_name
       directory 'lib/app_name', "lib/#{app_name}"
     end

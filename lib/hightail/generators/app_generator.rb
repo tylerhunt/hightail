@@ -21,6 +21,12 @@ module Hightail
       default: false,
       desc: 'Skip RSpec files'
 
+    class_option :skip_rvm,
+      type: :boolean,
+      aliases: '-V',
+      default: false,
+      desc: 'Skip RVM files'
+
     def initialize(*args)
       raise Rails::Generators::Error, 'Options should be given after the application name. For details run: hightail --help' if args[0].blank?
       super
@@ -32,6 +38,7 @@ module Hightail
     end
 
     def hightail_customization
+      build :rvm unless options[:skip_rvm]
       build :rspec unless options[:skip_rspec]
       build :lib_app_name
       build :remove_public_index
