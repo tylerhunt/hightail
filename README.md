@@ -24,6 +24,7 @@ Rails generator and what Hightail generates for you:
   * RSpec instead of Test::Unit
   * a customized form builder
   * default Sass style sheets
+  * a Haml application layout
   * simplified and unified generated files
   * a directory under lib for app-specific code
 
