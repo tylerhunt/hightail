@@ -6,7 +6,9 @@ source 'http://rubygems.org'
 <%= "gem 'json'\n" if RUBY_VERSION < "1.9.2" -%>
 <%= javascript_gemfile_entry %>
 
-<%= assets_gemfile_entry.gsub(/,\s+/, ', ') %>
+gem 'coercion'
+gem 'haml'
+
 # To use ActiveModel has_secure_password
 #gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -19,5 +21,6 @@ source 'http://rubygems.org'
 # To use debugger
 #<%= ruby_debugger_gemfile_entry %>
 
+<%= assets_gemfile_entry.gsub(/,\s+/, ', ') %>
 <%= turn_gemfile_entry -%>
 <%= rspec_gemfile_entry -%>
