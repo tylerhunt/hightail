@@ -20,3 +20,4 @@ source 'http://rubygems.org'
 #<%= ruby_debugger_gemfile_entry %>
 
 <%= turn_gemfile_entry -%>
+<%= rspec_gemfile_entry -%>

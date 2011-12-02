@@ -15,6 +15,12 @@ module Hightail
       default: true,
       desc: 'Skip Test::Unit files'
 
+    class_option :skip_rspec,
+      type: :boolean,
+      aliases: '-R',
+      default: false,
+      desc: 'Skip RSpec files'
+
     class_option :heroku,
       type: :boolean,
       aliases: '-H',
@@ -38,6 +44,7 @@ module Hightail
     end
 
     def hightail_customization
+      build :rspec unless options[:skip_rspec]
       build :lib_app_name
       build :remove_public_index
       build :remove_rails_logo
@@ -65,6 +72,17 @@ module Hightail
       else
         <<-GEMFILE.strip_heredoc
           gem 'rails'
+        GEMFILE
+      end
+    end
+
+    def rspec_gemfile_entry
+      unless options[:skip_rspec]
+        <<-GEMFILE.strip_heredoc
+          group :test do
+            gem 'rspec-rails'
+            gem 'remockable'
+          end
         GEMFILE
       end
     end
