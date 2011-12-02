@@ -33,6 +33,7 @@ module <%= app_const_base %>
 <% end -%>
 
     # Generators
+    config.generators.test_framework :rspec, views: false
     config.generators.template_engine :haml
   end
 end
