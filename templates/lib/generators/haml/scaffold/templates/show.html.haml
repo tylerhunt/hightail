@@ -1,0 +1,13 @@
+%h1 <%= human_name.titleize %>
+
+%nav
+  = link_to 'Back', <%= plural_name %>_path
+  = link_to 'Edit', edit_<%= singular_name %>_path(@<%= singular_name %>)
+  = link_to 'Delete', delete_<%= singular_name %>_path(@<%= singular_name %>)
+
+%dl
+<% attributes.each do |attribute| -%>
+  %dt <%= attribute.human_name %>
+  %dd= @<%= singular_name %>.<%= attribute.name %>
+
+<% end -%>

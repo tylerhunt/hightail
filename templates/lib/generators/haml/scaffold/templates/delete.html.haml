@@ -1,0 +1,9 @@
+%h1 Delete <%= human_name.titleize %>
+
+= form_for @<%= singular_name %>, method: :delete do |form|
+  = form.fieldset legend: 'Confirmation' do
+    %p Are you sure you want to delete this <%= human_name.downcase %>?
+
+  = form.submit 'Delete' do
+    or
+    = link_to 'cancel', <%= plural_name %>_path

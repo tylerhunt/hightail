@@ -1,0 +1,23 @@
+%h1 <%= human_name.titleize %>
+
+%nav= link_to 'New', new_<%= singular_name %>_path
+
+%table
+  %thead
+    %tr
+<% for attribute in attributes -%>
+      %th <%= attribute.human_name %>
+<% end -%>
+      %th Actions
+
+  %tbody
+    - @<%= plural_name %>.each do |<%= singular_name %>|
+      %tr
+<% for attribute in attributes -%>
+        %td= <%= singular_name %>.<%= attribute.name %>
+<% end -%>
+      %td
+        %nav
+          = link_to 'Show', <%= singular_name %>
+          = link_to 'Edit', edit_<%= singular_name %>_path(<%= singular_name %>)
+          = link_to 'Delete', delete_<%= singular_name %>_path(<%= singular_name %>)

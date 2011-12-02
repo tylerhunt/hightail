@@ -1,0 +1,6 @@
+= form.error_messages
+
+= form.fieldset legend: 'Details' do
+<% attributes.each do |attribute| -%>
+  = form.<%= attribute.field_type %> :<%= attribute.name %>
+<% end -%>

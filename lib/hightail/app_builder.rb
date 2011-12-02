@@ -18,6 +18,10 @@ module Hightail
       template 'rvmrc', '.rvmrc'
     end
 
+    def generators
+      directory 'lib/generators'
+    end
+
     def lib_app_name
       directory 'lib/app_name', "lib/#{app_name}"
     end

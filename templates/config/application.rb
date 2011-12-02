@@ -31,5 +31,8 @@ module <%= app_const_base %>
     config.assets.enabled = true
     config.assets.version = '1.0'
 <% end -%>
+
+    # Generators
+    config.generators.template_engine :haml
   end
 end

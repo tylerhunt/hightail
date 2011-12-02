@@ -1,0 +1,9 @@
+%h1 Edit <%= human_name.titleize %>
+
+= form_for @<%= singular_name %> do |form|
+  = render form
+
+  .submit
+    = form.submit 'Update'
+    or
+    = link_to 'cancel', <%= plural_name %>_path
