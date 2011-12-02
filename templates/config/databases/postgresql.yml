@@ -1,0 +1,19 @@
+defaults: &defaults
+  adapter: postgresql
+  encoding: unicode
+  pool: 20
+  username: <%= app_name %>
+  password: 
+  min_messages: WARNING
+
+development:
+  <<: *defaults
+  database: <%= app_name %>_development
+
+test:
+  <<: *defaults
+  database: <%= app_name %>_test
+
+production:
+  <<: *defaults
+  database: <%= app_name %>_development

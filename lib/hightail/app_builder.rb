@@ -1,5 +1,9 @@
 module Hightail
   class AppBuilder < Rails::AppBuilder
+    def database_yml
+      template "config/databases/#{options[:database]}.yml", 'config/database.yml.example'
+    end
+
     def readme
       template 'README.md'
     end
