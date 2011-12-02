@@ -13,4 +13,4 @@
     %section= yield
 
     %footer
-      %small &copy; #{Time.zone.today.year} 
+      %small &copy; #{Time.zone.today.year} <%= app_name %>
