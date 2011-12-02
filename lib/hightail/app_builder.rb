@@ -5,6 +5,11 @@ module Hightail
       directory 'app_overrides', 'app', :force => true
     end
 
+    def lib
+      super
+      directory 'lib', nil, :force => true
+    end
+
     def database_yml
       template "config/databases/#{options[:database]}.yml", 'config/database.yml.example'
     end
@@ -21,14 +26,6 @@ module Hightail
 
     def rvm
       template 'rvmrc', '.rvmrc'
-    end
-
-    def generators
-      directory 'lib/generators'
-    end
-
-    def lib_app_name
-      directory 'lib/app_name', "lib/#{app_name}"
     end
 
     def remove_public_index
