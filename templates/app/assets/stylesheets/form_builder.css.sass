@@ -1,0 +1,112 @@
+@import 'common'
+
+form
+  section > &
+    +rounded
+    background: #FFF
+    color: #000
+    padding: $spacer
+
+  input,
+  select
+    +rounded(0.25em)
+    background: #EEE
+    border: 0.125em solid #999
+    font-family: 'Helvetica', sans-serif
+    font-size: 1em
+    margin: 0
+    padding: 0.25em
+
+    &:focus
+      +shadow(0, 0, 0.5em, $blue)
+      outline: none
+
+  fieldset
+    border-top: 0.125em solid #999
+    margin: ($spacer / 2) 0
+    padding-top: $spacer
+
+    legend
+      border-right: (0.125em / 0.875) solid #999
+      color: #666
+      font-size: 0.875em
+      font-weight: bold
+      padding-right: 0.5em
+      text-transform: uppercase
+
+    fieldset
+      margin-left: $spacer * 2
+
+    & > p
+      margin-bottom: $spacer
+
+    .section
+      :clear left
+
+      .field
+        :float left
+        :margin-right $spacer * 2
+
+  .field
+    margin-bottom: $spacer
+
+    label
+      display: block
+      line-height: $line-height
+
+    &.required label
+      font-weight: bold
+
+    &.optional label
+      color: #666
+      font-style: italic
+
+    &.radio input
+      height: $line-height
+      float: left
+      margin-right: 0.5em
+
+    .instructions
+      color: $gray
+      font-size: 0.875em
+      font-style: italic
+      line-height: $line-height / 0.875
+
+  .submit
+    border-top: 0.25em solid #999
+    padding-top: $spacer
+
+    input
+      +rounded
+      background: $blue
+      border-color: $blue
+      color: #FFF
+      font-weight: bold
+      margin-right: 0.25em
+      padding: 0.25em 0.5em
+
+    a
+      font-weight: bold
+      margin: 0 0.25em
+
+  .errors
+    color: $error
+    border-color: $error
+
+    legend
+      color: $error
+      border-color: $error
+
+    ul
+      margin-bottom: $spacer
+
+      li
+        list-style: disc
+        line-height: $line-height
+
+  .field_with_errors
+    label
+      :color $error
+
+    input
+      border-color: $error

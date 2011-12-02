@@ -1,0 +1,50 @@
+@import 'common'
+
+body
+  background-color: $background
+  color: $text
+  font-family: 'Helvetica', sans-serif
+  padding: $spacer
+
+  a
+    color: $link
+
+  & > header
+    margin-bottom: $spacer
+
+    h1
+      font-size: $line-height * 2
+
+      a
+        color: $black
+        text-decoration: none
+
+  & > section
+    & > h1
+      font-size: $line-height
+
+    & > nav
+      margin: $spacer 0
+      overflow: auto
+
+      a
+        border: 2px solid $blue
+        display: block
+        float: left
+        font-size: 0.75em
+        font-weight: bold
+        line-height: $line-height / 0.75
+        margin-right: (0.5em / 0.75)
+        padding: 0 (0.5em / 0.75)
+        text-decoration: none
+        text-transform: uppercase
+
+  & > footer
+    border-top: 1px solid $gray
+    color: $gray
+    margin-top: $spacer
+    text-align: right
+
+    small
+      font-size: 0.75em
+      line-height: $line-height / 0.75em

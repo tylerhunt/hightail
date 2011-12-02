@@ -1,0 +1,40 @@
+$black: #000
+$off-black: #111
+$dark-gray: #333
+$gray: #666
+$medium-gray: #999
+$light-gray: #CCC
+$off-white: #EEE
+$white: #FFF
+
+$red: #F33
+$blue: #369
+$green: #9C6
+
+$background: $white
+$text: $black
+$link: $blue
+$error: $red
+
+$spacer: 1.5em
+$line_height: $spacer
+
+=rounded($radius: 0.5em)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+
+=shadow($top: 0, $left: 0, $radius: 1.5em, $color: rgba(0, 0, 0, 0.5))
+  box-shadow: $top $left $radius $color
+  -webkit-box-shadow: $top $left $radius $color
+  -moz-box-shadow: $top $left $radius $color
+
+=inset($top: 0, $left: 0, $radius: 0.5em, $color: rgba(0, 0, 0, 0.5))
+  box-shadow: inset $top $left $radius $color
+  -webkit-box-shadow: inset $top $left $radius $color
+  -moz-box-shadow: inset $top $left $radius $color
+
+=ease($duration: 0.25s)
+  transition: all $duration ease-in-out
+  -webkit-transition: all $duration ease-in-out
+  -moz-transition: all $duration ease-in-out
+  -ms-transition: all $duration ease-in-out
