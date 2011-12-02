@@ -21,18 +21,6 @@ module Hightail
       default: false,
       desc: 'Skip RSpec files'
 
-    class_option :heroku,
-      type: :boolean,
-      aliases: '-H',
-      default: false,
-      desc: 'Create staging and production heroku apps'
-
-    class_option :omniauth,
-      type: :boolean,
-      aliases: '-o',
-      default: true,
-      desc: 'Add the OmniAuth Rails authentication library'
-
     def initialize(*args)
       raise Rails::Generators::Error, 'Options should be given after the application name. For details run: hightail --help' if args[0].blank?
       super
