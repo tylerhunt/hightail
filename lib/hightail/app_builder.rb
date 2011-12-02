@@ -22,6 +22,10 @@ module Hightail
       directory 'lib/generators'
     end
 
+    def stylesheets
+      directory 'stylesheets', 'app/assets/stylesheets'
+    end
+
     def lib_app_name
       directory 'lib/app_name', "lib/#{app_name}"
     end
