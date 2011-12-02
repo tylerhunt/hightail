@@ -22,13 +22,11 @@ module Hightail
 
     class_option :skip_rspec,
       type: :boolean,
-      aliases: '-R',
       default: false,
       desc: 'Skip RSpec files'
 
     class_option :skip_rvm,
       type: :boolean,
-      aliases: '-V',
       default: false,
       desc: 'Skip RVM files'
 
