@@ -1,0 +1,6 @@
+en:
+  errors:
+    template:
+      header:
+        one: 'Error'
+        other: 'Errors'

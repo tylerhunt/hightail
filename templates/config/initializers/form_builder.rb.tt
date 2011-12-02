@@ -1,0 +1,5 @@
+<%= app_const %>.configure do
+  config.to_prepare do
+    config.action_view.default_form_builder = <%= app_const_base %>::FormBuilder
+  end
+end

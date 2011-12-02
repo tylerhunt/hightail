@@ -38,6 +38,7 @@ module Hightail
     end
 
     def hightail_customization
+      build :lib_app_name
       build :remove_public_index
       build :remove_rails_logo
     end
