@@ -9,10 +9,9 @@ module Hightail
     end
 
     def rspec
-      empty_directory_with_gitkeep 'spec/support'
-
-      template '.rspec'
+      copy_file 'rspec', '.rspec'
       template 'spec/spec_helper.rb'
+      empty_directory_with_gitkeep 'spec/support'
     end
 
     def lib_app_name
