@@ -5,7 +5,6 @@ Gem::Specification.new do |s|
   s.version = Hightail::VERSION
   s.authors = ['Tyler Hunt']
   s.email = ['tyler@tylerhunt.com']
-  s.summary = %q{TODO: Write a gem summary}
   s.summary = 'Bootstraps a pretty looking Rails app in a jiff.'
 
   s.files = `git ls-files`.split("\n")
