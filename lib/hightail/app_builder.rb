@@ -2,6 +2,7 @@ module Hightail
   class AppBuilder < Rails::AppBuilder
     def app
       super
+      remove_file 'app/views/layouts/application.html.erb'
       directory 'app_overrides', 'app', :force => true
     end
 
