@@ -92,6 +92,8 @@ module <%= app_const_base %>
       end
     end
 
+    alias_method :hidden, :hidden_field
+
     def text(method, options={}, &block)
       input(method, options.merge(:type => :text_field), &block)
     end
