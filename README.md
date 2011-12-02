@@ -28,6 +28,9 @@ Rails generator and what Hightail generates for you:
   * simplified and unified generated files
   * a directory under lib for app-specific code
 
+And a slew of other minor changes. Basically, these are all the things I found
+myself doing over and over whenever I created a new Rails app.
+
 
 ## Credits
 
