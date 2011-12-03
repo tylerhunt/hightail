@@ -1,3 +1,7 @@
-<%= app_const %>.configure do
-  config.action_view.default_form_builder <%= app_const_base %>::FormBuilder
-end
+# This should work, but it doesn't because of http://git.io/7sQi8g:
+#<%= app_const %>.configure do
+#  config.action_view.default_form_builder <%= app_const_base %>::FormBuilder
+#end
+
+# So let's do this instead until it's fixed:
+ActionView::Base.default_form_builder = <%= app_const_base %>::FormBuilder
