@@ -1,4 +1,6 @@
-Hightail bootstraps a pretty looking Rails app in a jiff.
+# Hightail
+
+Bootstraps a pretty looking Rails app in a jiff.
 
 
 ## Installation
