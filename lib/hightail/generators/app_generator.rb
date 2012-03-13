@@ -41,8 +41,9 @@ module Hightail
     end
 
     def hightail_customization
-      build :rvm unless options[:skip_rvm]
+      build :bundler
       build :rspec unless options[:skip_rspec]
+      build :rvm unless options[:skip_rvm]
       build :remove_public_index
       build :remove_rails_logo
     end

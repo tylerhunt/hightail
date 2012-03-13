@@ -19,6 +19,10 @@ module Hightail
       template 'README.md'
     end
 
+    def bundler
+      directory 'bundle', '.bundle'
+    end
+
     def rspec
       copy_file 'rspec', '.rspec'
       template 'spec/spec_helper.rb'
