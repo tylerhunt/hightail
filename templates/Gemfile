@@ -6,19 +6,9 @@ source 'http://rubygems.org'
 <%= "gem 'json'\n" if RUBY_VERSION < "1.9.2" -%>
 <%= javascript_gemfile_entry %>
 
+#gem 'bcrypt-ruby', '~> 3.0.0' # Required for ActiveModel's has_secure_password
 gem 'coercion'
 gem 'haml'
-
-# To use ActiveModel has_secure_password
-#gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Use unicorn as the web server
-#gem 'unicorn'
-
-# Deploy with Capistrano
-#gem 'capistrano'
-
-# To use debugger
 #<%= ruby_debugger_gemfile_entry %>
 
 <%= assets_gemfile_entry.gsub(/,\s+/, ', ') %>
