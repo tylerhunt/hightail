@@ -33,8 +33,13 @@ module <%= app_const_base %>
 <% end -%>
 
     # Generators
-    config.generators.test_framework :rspec, view_specs: false
-    config.generators.template_engine :haml
+    config.generators do |generators|
+      generators.orm :active_record, parent: 'ApplicationModel'
+      generators.test_framework :rspec, view_specs: false
+      generators.template_engine :haml
+    end
+
+    # Sass
     config.sass.preferred_syntax = :sass
   end
 end

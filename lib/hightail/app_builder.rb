@@ -25,7 +25,7 @@ module Hightail
 
     def rspec
       copy_file 'rspec', '.rspec'
-      template 'spec/spec_helper.rb'
+      directory 'spec'
       empty_directory_with_gitkeep 'spec/support'
     end
 
