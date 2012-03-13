@@ -12,5 +12,4 @@ gem 'haml'
 #<%= ruby_debugger_gemfile_entry %>
 
 <%= assets_gemfile_entry.gsub(/,\s+/, ', ') %>
-<%= turn_gemfile_entry -%>
 <%= rspec_gemfile_entry -%>
