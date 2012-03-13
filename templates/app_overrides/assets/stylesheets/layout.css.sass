@@ -39,6 +39,23 @@ body
         text-decoration: none
         text-transform: uppercase
 
+    & > dl
+      margin: $spacer 0
+      border-top: 2px dotted $light-gray
+
+      dd,
+      dt
+        line-height: $line-height
+        border-bottom: 2px dotted $light-gray
+
+      dt
+        float: left
+        width: 10em
+        font-size: 0.75em
+        font-weight: bold
+        line-height: $line-height / 0.75
+        text-transform: uppercase
+
   & > footer
     border-top: 1px solid $gray
     color: $gray

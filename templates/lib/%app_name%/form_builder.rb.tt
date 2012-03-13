@@ -79,7 +79,7 @@ module <%= app_const_base %>
           send(type, method, options)
       end
 
-      label = label != false ? label(method) : nil
+      label = options[:label] != false ? label(method) : nil
       markup = [label, input].compact
       markup.reverse! if [:check_box, :radio_button].include?(type)
 

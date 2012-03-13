@@ -4,7 +4,8 @@ form
   margin: $spacer 0
 
   input,
-  select
+  select,
+  textarea
     +rounded(0.25em)
     background: #EEE
     border: 0.125em solid #999
@@ -57,10 +58,14 @@ form
       color: #666
       font-style: italic
 
-    &.radio input
-      height: $line-height
-      float: left
-      margin-right: 0.5em
+    &.checkbox,
+    &.radio
+      white-space: nowrap
+
+      input
+        height: $line-height
+        float: left
+        margin-right: 0.5em
 
     .instructions
       color: $gray
@@ -104,5 +109,7 @@ form
     label
       :color $error
 
-    input
+    input,
+    select,
+    textarea
       border-color: $error
