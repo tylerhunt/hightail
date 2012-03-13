@@ -1,3 +1,3 @@
 <%= app_const %>.routes.draw do
-  #root :to => 'pages#index'
+  #root :to => 'root#index'
 end
